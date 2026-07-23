@@ -22,7 +22,7 @@ const Achievements = () => {
       title: "Certificates & Honors",
       subTitle: "Professional Development",
       date: "2023 - 2024",
-      desc: "Earned certifications in Full Stack Development and Cloud Computing through various industry-recognized platforms.",
+      desc: "Earned certifications in Software Development and Cloud Computing through various industry-recognized platforms.",
       icon: <FaCertificate className="text-[#e8c872]" />
     }
   ];

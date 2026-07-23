@@ -18,7 +18,8 @@ const Contact = () => {
     setStatus({ type: '', msg: '' });
 
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', formData);
+      const apiUrl = import.meta.env.VITE_API_URL || '/api/contact';
+      const res = await axios.post(apiUrl, formData);
       setStatus({ type: 'success', msg: res.data.msg || 'Message sent successfully!' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
@@ -65,7 +66,7 @@ const Contact = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-8">Let's connect & <br/><span className="text-[#e8c872]">collaborate.</span></h3>
             <p className="text-slate-400 text-lg leading-relaxed mb-12 max-w-lg">
-              I'm actively looking for internships, freelance projects, and full-time roles in full-stack development. 
+              I'm actively looking for internships, freelance projects, and full-time roles in software development. 
               Whether you have a project in mind or just want to say hi, my inbox is always open.
             </p>
 

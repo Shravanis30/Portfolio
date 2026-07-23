@@ -1,7 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaRocket, FaPaperPlane } from 'react-icons/fa';
 import shravaniPhoto from '../assets/shravani.jpg';
+
+const Typewriter = ({ words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 1500 }) => {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [reverse, setReverse] = useState(false);
+  const [blink, setBlink] = useState(true);
+
+  useEffect(() => {
+    const timeout = setInterval(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearInterval(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (subIndex === words[index].length + 1 && !reverse) {
+      const timeout = setTimeout(() => {
+        setReverse(true);
+      }, pauseTime);
+      return () => clearTimeout(timeout);
+    }
+
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, reverse ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse, words, typingSpeed, deletingSpeed, pauseTime]);
+
+  return (
+    <span className="text-white font-bold inline-flex items-center">
+      {words[index].substring(0, subIndex)}
+      <span className={`w-0.5 h-6 bg-[#e8c872] ml-1 ${blink ? 'opacity-100' : 'opacity-0'}`}></span>
+    </span>
+  );
+};
 
 const Hero = () => {
   return (
@@ -15,18 +57,6 @@ const Hero = () => {
         {/* Left Content Area */}
         <div className="lg:w-[55%] flex flex-col items-start mt-10 lg:mt-0 lg:pr-10 xl:pr-20">
           
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#e8c872]/30 bg-[#1a1a1a]/50 backdrop-blur-sm mb-8"
-          >
-            <div className="w-2 h-2 rounded-full bg-[#10b981]"></div>
-            <span className="text-[10px] sm:text-xs font-bold tracking-widest text-[#e8c872] uppercase">
-              Available For Opportunities
-            </span>
-          </motion.div>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,9 +80,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-xl md:text-2xl text-slate-400 mb-8 flex items-center"
+            className="text-xl md:text-2xl text-slate-400 mb-8 flex items-center h-8"
           >
-            I'm a&nbsp;<span className="text-white font-bold inline-flex items-center">Full Stack Developer<span className="w-0.5 h-6 bg-[#e8c872] ml-1 animate-pulse"></span></span>
+            I'm a&nbsp;<Typewriter words={['Software Developer', 'Freelancer', 'Tech Enthusiast']} />
           </motion.p>
 
           <motion.p
@@ -61,7 +91,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-slate-400 text-sm md:text-base max-w-md leading-relaxed mb-10"
           >
-            Full Stack Developer based in Maharashtra, India.
+            Software Developer based in Maharashtra, India.
             <br />
             I strive to translate business requirements into efficient, scalable software solutions.
           </motion.p>

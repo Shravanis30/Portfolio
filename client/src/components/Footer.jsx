@@ -14,7 +14,7 @@ const Footer = () => {
             SS
           </a>
           <p className="mt-4 text-slate-500 text-xs font-bold tracking-widest uppercase">
-            Full Stack Developer & Designer
+            Software Developer & Designer
           </p>
         </div>
 

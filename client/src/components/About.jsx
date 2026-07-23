@@ -66,13 +66,11 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-slate-400 text-lg leading-relaxed">
-                I'm a final-year Diploma student at <span className="text-white font-semibold">DR. Babasaheb Ambedkar Technological University</span>, Lonere. 
-                Building at the intersection of web technology and software architecture, I enjoy making complex information easy to understand and use.
+                I completed my Diploma in Computer Engineering from <span className="text-white font-semibold">Dr. Babasaheb Ambedkar Technological University</span> (CGPA 9.40/10) and am pursuing B.Tech in CSE (IoT, Cyber Security & Blockchain) at <span className="text-white font-semibold">Vishwakarma Institute of Technology, Pune</span>. Building at the intersection of full-stack development, AI, and cloud architecture, I enjoy transforming complex requirements into scalable, user-centric software solutions.
               </p>
               
               <p className="text-slate-400 text-lg leading-relaxed">
-                As a Full Stack Developer Intern at <span className="text-white font-semibold italic">IITianCraft</span>, I've had the pleasure of building responsive UI components, 
-                improving cloud-based performance, and working in production-ready agile environments.
+                As a Software Developer Intern at <span className="text-white font-semibold italic">IITianCraft</span>, I have engineered and deployed <span className="text-white font-semibold">10+ production-ready full-stack applications</span>, building responsive frontends, scalable backends, REST APIs, and managing end-to-end cloud deployments — receiving a <span className="text-white font-semibold">Letter of Recommendation</span> for technical ownership and client collaboration.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
