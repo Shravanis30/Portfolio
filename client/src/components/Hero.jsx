@@ -49,14 +49,14 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-background pt-20">
       {/* Abstract dark network background - simple CSS representation */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 15% 50%, rgba(232, 200, 114, 0.08) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(232, 200, 114, 0.05) 0%, transparent 50%)' }} />
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle at 15% 50%, rgba(232, 200, 114, 0.08) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(232, 200, 114, 0.05) 0%, transparent 50%)' }} />
 
       <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between">
-        
+
         {/* Left Content Area */}
         <div className="lg:w-[55%] flex flex-col items-start mt-10 lg:mt-0 lg:pr-10 xl:pr-20">
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ const Hero = () => {
           >
             Hello World, I'm
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const Hero = () => {
             >
               <FaRocket /> VIEW MY WORK
             </a>
-            
+
             <a
               href="#contact"
               className="px-6 py-3 rounded-full bg-transparent border border-white/10 text-slate-300 text-xs font-bold tracking-widest sm:text-sm hover:bg-white/5 transition-colors flex items-center gap-2"
@@ -127,7 +127,7 @@ const Hero = () => {
             </a>
           </motion.div>
 
-          {/* Social Icons & Scroll indicator Row */}
+          {/* Social Icons Row */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -151,19 +151,12 @@ const Hero = () => {
                 </a>
               ))}
             </div>
-
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-8 rounded-full border border-white/20 flex justify-center p-1">
-                <div className="w-1 h-2 bg-[#10b981] rounded-full"></div>
-              </div>
-              <span className="text-[10px] text-slate-500 font-bold tracking-widest">SCROLL DOWN</span>
-            </div>
           </motion.div>
-        
+
         </div>
 
         {/* Right Content Area / Image */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -171,13 +164,13 @@ const Hero = () => {
         >
           {/* Main Circular Mask */}
           <div className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] mx-auto rounded-full overflow-hidden relative bg-[#1a1a1a] shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-            <img 
-              src={shravaniPhoto} 
-              alt="Shravani Salunke" 
+            <img
+              src={shravaniPhoto}
+              alt="Shravani Salunke"
               className="w-full h-full object-cover opacity-70 grayscale hover:grayscale-0 transition-all duration-700"
             />
           </div>
-          
+
           {/* Side Nav Dots (Decoration matching reference) */}
           <div className="absolute top-1/2 -right-20 lg:-right-28 -translate-y-1/2 flex flex-col gap-4 hidden xl:flex">
             <div className="w-2.5 h-2.5 rounded-full bg-[#e8c872] ring-1 ring-[#e8c872] ring-offset-4 ring-offset-background"></div>

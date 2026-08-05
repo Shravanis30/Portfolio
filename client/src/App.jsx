@@ -9,10 +9,12 @@ import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <div className="min-h-screen bg-background text-slate-100 font-sans selection:bg-[#e8c872]/30 selection:text-[#e8c872]">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />

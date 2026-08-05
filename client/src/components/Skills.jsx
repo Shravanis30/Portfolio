@@ -6,71 +6,102 @@ import {
   FaDatabase, 
   FaCloud, 
   FaLayerGroup, 
-  FaTools,
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
+  FaServer,
+  FaRobot,
+  FaLink,
   FaPython,
   FaJava,
+  FaReact,
+  FaNodeJs,
   FaDocker,
   FaGitAlt,
   FaGithub,
   FaAws,
-  FaRobot,
-  FaLink
+  FaBrain,
+  FaLock,
+  FaCubes
 } from 'react-icons/fa';
-import { SiExpress, SiNextdotjs, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiTypescript } from 'react-icons/si';
+import { 
+  SiExpress, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiMongodb, 
+  SiMysql, 
+  SiPostgresql, 
+  SiRedis, 
+  SiTypescript, 
+  SiFastapi, 
+  SiTensorflow, 
+  SiPytorch, 
+  SiEthereum, 
+  SiSolidity 
+} from 'react-icons/si';
 
 const Skills = () => {
-  const skillCards = [
+  const skillCategories = [
     {
       title: "Languages",
-      description: "C, C++, Java, Python, JavaScript, TypeScript, SQL, HTML, CSS",
+      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "SQL"],
       icon: <FaCode className="text-[#e8c872]" />
     },
     {
-      title: "Frameworks & Libraries",
-      description: "React.js, Next.js, Node.js, Express.js, Tailwind CSS, TensorFlow, PyTorch, Scikit-learn, OpenCV, LangChain",
+      title: "Frontend",
+      skills: ["React.js", "Next.js", "Tailwind CSS", "HTML5", "CSS3"],
       icon: <FaLayerGroup className="text-[#e8c872]" />
     },
     {
+      title: "Backend",
+      skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "JWT"],
+      icon: <FaServer className="text-[#e8c872]" />
+    },
+    {
       title: "AI & Machine Learning",
-      description: "Machine Learning, Deep Learning, Computer Vision, CNNs, Generative AI, RAG, LLM Applications, Prompt Engineering",
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "LLMs", "Generative AI", "LangChain", "LangGraph", "CrewAI", "RAG", "Prompt Engineering", "AI Agents"],
       icon: <FaRobot className="text-[#e8c872]" />
     },
     {
-      title: "Blockchain & Web3",
-      description: "Hyperledger Fabric, Ethereum, Solidity, Smart Contracts, IPFS, Web3.js/Ethers.js, DApps",
-      icon: <FaLink className="text-[#e8c872]" />
-    },
-    {
-      title: "Cloud, DevOps & Tools",
-      description: "AWS (EC2, S3, Lambda, API Gateway), Docker, Git, GitHub, Postman, MongoDB Atlas Vector Search",
+      title: "Cloud & DevOps",
+      skills: ["AWS (EC2, S3, Lambda, API Gateway, IAM, CloudWatch, DynamoDB, RDS, CloudFront)", "Docker", "Git", "GitHub", "CI/CD", "Linux"],
       icon: <FaCloud className="text-[#e8c872]" />
     },
     {
-      title: "Databases & Core",
-      description: "MySQL, MongoDB, DynamoDB, Redis. Data Structures, Algorithms, OOP, Operating Systems, DBMS",
+      title: "Databases",
+      skills: ["PostgreSQL", "MongoDB", "MySQL", "DynamoDB", "Amazon RDS", "Redis"],
       icon: <FaDatabase className="text-[#e8c872]" />
+    },
+    {
+      title: "Blockchain",
+      skills: ["Hyperledger Fabric", "Ethereum", "Solidity", "Smart Contracts", "IPFS", "Web3.js"],
+      icon: <FaLink className="text-[#e8c872]" />
     }
   ];
 
   const technologies = [
-    { name: "C/C++", icon: <FaCode /> },
-    { name: "Java", icon: <FaJava /> },
     { name: "Python", icon: <FaPython /> },
-    { name: "JavaScript", icon: <FaJsSquare /> },
+    { name: "Java", icon: <FaJava /> },
+    { name: "C/C++", icon: <FaCode /> },
+    { name: "JavaScript", icon: <FaCode /> },
     { name: "TypeScript", icon: <SiTypescript /> },
-    { name: "React", icon: <FaReact /> },
+    { name: "React.js", icon: <FaReact /> },
     { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Express.js", icon: <SiExpress /> },
+    { name: "FastAPI", icon: <SiFastapi /> },
+    { name: "TensorFlow", icon: <SiTensorflow /> },
+    { name: "PyTorch", icon: <SiPytorch /> },
+    { name: "LLMs / RAG", icon: <FaBrain /> },
+    { name: "AI Agents", icon: <FaRobot /> },
     { name: "AWS", icon: <FaAws /> },
     { name: "Docker", icon: <FaDocker /> },
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
     { name: "MongoDB", icon: <SiMongodb /> },
     { name: "MySQL", icon: <SiMysql /> },
-    { name: "Git", icon: <FaGitAlt /> }
+    { name: "Redis", icon: <SiRedis /> },
+    { name: "Ethereum", icon: <SiEthereum /> },
+    { name: "Solidity", icon: <SiSolidity /> },
+    { name: "Hyperledger", icon: <FaCubes /> },
+    { name: "Git & GitHub", icon: <FaGitAlt /> }
   ];
 
   return (
@@ -86,7 +117,7 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             className="text-[10px] font-bold tracking-[0.3em] text-slate-500 uppercase mb-4"
           >
-            What I Know
+            Capabilities & Expertise
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -102,24 +133,36 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-          {skillCards.map((card, index) => (
+          {skillCategories.map((cat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#161616] border border-white/5 p-10 rounded-2xl group hover:border-[#e8c872]/20 transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="bg-[#161616] border border-white/5 p-8 rounded-2xl group hover:border-[#e8c872]/30 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="w-12 h-12 bg-[#1a1a1a] rounded-xl flex items-center justify-center mb-8 border border-white/5 group-hover:border-[#e8c872]/30 transition-colors">
-                <div className="scale-125">{card.icon}</div>
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-[#1a1a1a] rounded-xl flex items-center justify-center border border-white/5 group-hover:border-[#e8c872]/40 transition-colors">
+                    <div className="scale-125">{cat.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-[#e8c872] transition-colors">
+                    {cat.title}
+                  </h3>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill, sIdx) => (
+                    <span 
+                      key={sIdx}
+                      className="px-3 py-1.5 bg-[#0d0d0d] border border-white/10 rounded-lg text-xs font-semibold text-slate-300 group-hover:border-white/20 transition-all"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 tracking-tight group-hover:text-[#e8c872] transition-colors">
-                {card.title}
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-[280px]">
-                {card.description}
-              </p>
             </motion.div>
           ))}
         </div>
@@ -136,18 +179,18 @@ const Skills = () => {
             Technologies I work with
           </motion.p>
           
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                transition={{ duration: 0.3, delay: index * 0.03 }}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2.5 px-5 py-2.5 bg-[#161616] border border-white/10 rounded-full text-slate-300 text-xs font-semibold tracking-wide hover:border-[#e8c872]/40 hover:text-white transition-all cursor-default"
+                className="flex items-center gap-2.5 px-5 py-2.5 bg-[#161616] border border-white/10 rounded-full text-slate-300 text-xs font-semibold tracking-wide hover:border-[#e8c872]/50 hover:text-white transition-all cursor-default shadow-md"
               >
-                <span className="text-[#e8c872]/80">{tech.icon}</span>
+                <span className="text-[#e8c872]/90">{tech.icon}</span>
                 {tech.name}
               </motion.div>
             ))}
