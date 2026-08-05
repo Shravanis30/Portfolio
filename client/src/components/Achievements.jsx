@@ -1,28 +1,49 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTrophy, FaAward, FaCertificate } from 'react-icons/fa';
+import { FaTrophy, FaCode, FaMedal, FaCertificate } from 'react-icons/fa';
 
 const Achievements = () => {
   const achievements = [
     {
-      title: "Internal Hackathon Winner",
-      subTitle: "Ranked 1st out of 27 Teams",
+      title: "1st Place, Internal Hackathon (27 Teams)",
+      subTitle: "Qualified for Smart India Hackathon (SIH)",
       date: "2024",
-      desc: "Qualified for the Smart India Hackathon (SIH) by securing 1st place in the internal university-level hackathon for innovative problem-solving.",
+      desc: "Secured 1st rank out of 27 competing teams in the internal hackathon, earning qualification for Smart India Hackathon (SIH) 2024.",
       icon: <FaTrophy className="text-[#e8c872]" />
     },
     {
-      title: "Research Paper Publication",
-      subTitle: "International Conference",
-      date: "2024",
-      desc: "Researched and presented findings on LLM performance and accuracy in medical AI applications at an international level.",
-      icon: <FaAward className="text-[#e8c872]" />
+      title: "Solved 150+ DSA Problems",
+      subTitle: "LeetCode & Codeforces",
+      date: "Active",
+      desc: "Solved 150+ Data Structures & Algorithms problems across LeetCode and Codeforces, developing strong algorithmic problem-solving skills.",
+      icon: <FaCode className="text-[#e8c872]" />
     },
     {
-      title: "Certificates & Honors",
-      subTitle: "Professional Development",
+      title: "Finalist in 5+ National Hackathons",
+      subTitle: "National Competitions",
       date: "2023 - 2024",
-      desc: "Earned certifications in Software Development and Cloud Computing through various industry-recognized platforms.",
+      desc: "Selected as a finalist in 5+ prestigious national-level hackathons, building innovative tech solutions under competitive timeframes.",
+      icon: <FaMedal className="text-[#e8c872]" />
+    },
+    {
+      title: "Generative AI and Agents",
+      subTitle: "Microsoft Learn Certificate",
+      date: "Certification",
+      desc: "Certified by Microsoft Learn in Generative AI fundamentals, LLM capabilities, autonomous agent design, and AI application principles.",
+      icon: <FaCertificate className="text-[#e8c872]" />
+    },
+    {
+      title: "Introduction to AI Concepts",
+      subTitle: "Microsoft Learn Certificate",
+      date: "Certification",
+      desc: "Certified by Microsoft Learn in core artificial intelligence concepts, machine learning workloads, and AI service integration.",
+      icon: <FaCertificate className="text-[#e8c872]" />
+    },
+    {
+      title: "AWS Cloud Foundations",
+      subTitle: "AWS Essentials Certificate",
+      date: "Certification",
+      desc: "Certified in AWS Foundations: Getting Started with the AWS Cloud Essentials, mastering core cloud infrastructure, security, and services.",
       icon: <FaCertificate className="text-[#e8c872]" />
     }
   ];
@@ -40,7 +61,7 @@ const Achievements = () => {
             transition={{ duration: 0.5 }}
             className="text-[10px] font-bold tracking-[0.3em] text-slate-500 uppercase mb-4"
           >
-            Milestones
+            Milestones & Credentials
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -63,24 +84,26 @@ const Achievements = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#161616] border border-white/5 p-10 rounded-2xl group hover:border-[#e8c872]/20 transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-[#161616] border border-white/5 p-8 sm:p-10 rounded-2xl group hover:border-[#e8c872]/20 transition-all duration-300 flex flex-col items-center text-center justify-between"
             >
-              <div className="w-16 h-16 bg-[#1a1a1a] rounded-2xl flex items-center justify-center mb-8 border border-white/5 group-hover:border-[#e8c872]/30 transition-colors">
-                <div className="scale-[1.7]">{ach.icon}</div>
+              <div className="flex flex-col items-center w-full">
+                <div className="w-16 h-16 bg-[#1a1a1a] rounded-2xl flex items-center justify-center mb-6 border border-white/5 group-hover:border-[#e8c872]/30 transition-colors">
+                  <div className="scale-[1.7]">{ach.icon}</div>
+                </div>
+                
+                <div className="mb-4">
+                  <span className="text-[10px] font-bold text-[#e8c872] uppercase tracking-[0.2em]">{ach.date}</span>
+                  <h3 className="text-xl font-bold text-white mt-1 group-hover:text-[#e8c872] transition-colors leading-snug">
+                    {ach.title}
+                  </h3>
+                </div>
+                
+                <p className="text-[#e8c872]/70 text-xs font-semibold uppercase tracking-wider mb-4 italic">{ach.subTitle}</p>
+                
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  {ach.desc}
+                </p>
               </div>
-              
-              <div className="mb-6">
-                <span className="text-[10px] font-bold text-[#e8c872] uppercase tracking-[0.2em]">{ach.date}</span>
-                <h3 className="text-2xl font-bold text-white mt-1 group-hover:text-[#e8c872] transition-colors leading-tight">
-                  {ach.title}
-                </h3>
-              </div>
-              
-              <p className="text-[#e8c872]/60 text-xs font-bold uppercase tracking-widest mb-4 italic">{ach.subTitle}</p>
-              
-              <p className="text-slate-400 text-sm leading-relaxed max-w-[280px]">
-                {ach.desc}
-              </p>
             </motion.div>
           ))}
         </div>
