@@ -169,8 +169,8 @@ const Projects = () => {
         "Enterprise backend with FastAPI, vector search, encrypted storage, Docker, Kubernetes & AWS infrastructure."
       ],
       tech: ["Flutter", "FastAPI", "Python", "Rust", "PostgreSQL", "SQLCipher", "Qdrant", "Neo4j", "LangGraph", "LiteLLM", "Ollama", "Docker", "Kubernetes", "AWS"],
-      github: "https://github.com/shravanisalunke/PersonaOS",
-      live: "https://github.com/shravanisalunke/PersonaOS"
+      github: "https://github.com/Shravanis30/PersonaOS",
+      live: "https://github.com/Shravanis30/PersonaOS"
     },
     {
       title: "AgentChain - AI Workforce Platform",
@@ -184,8 +184,8 @@ const Projects = () => {
         "Deployed on AWS (EC2, Lambda, S3, API Gateway, DynamoDB) with CI/CD & high availability."
       ],
       tech: ["Python", "FastAPI", "React.js", "Next.js", "LangGraph", "CrewAI", "Llama 3", "PostgreSQL", "Qdrant", "Ethereum", "Solidity", "IPFS", "Docker", "Redis", "AWS"],
-      github: "https://github.com/shravanisalunke/AgentChain",
-      live: "https://github.com/shravanisalunke/AgentChain"
+      github: "https://github.com/Shravanis30/AgentChain",
+      live: "https://github.com/Shravanis30/AgentChain"
     },
     {
       title: "BotaniLedger",
@@ -198,8 +198,8 @@ const Projects = () => {
         "Features CNN plant identification model (94.3% accuracy), IPFS, smart contracts & React PWA."
       ],
       tech: ["Hyperledger Fabric", "React PWA", "CNN", "IPFS", "Solidity"],
-      github: "https://github.com/shravanisalunke/BotaniLedger",
-      live: "https://github.com/shravanisalunke/BotaniLedger"
+      github: "https://github.com/Shravanis30/BotaniLedger",
+      live: "https://github.com/Shravanis30/BotaniLedger"
     },
     {
       title: "VaultSight AI",
@@ -212,8 +212,8 @@ const Projects = () => {
         "Includes Auto-Lock flow for high-risk transactions (>75 score) and Admin Override capabilities."
       ],
       tech: ["MongoDB Vector", "React", "Node.js", "FastAPI", "AI Risk Scoring"],
-      github: "https://github.com/shravanisalunke/VaultSight_AI",
-      live: "https://github.com/shravanisalunke/VaultSight_AI"
+      github: "https://github.com/Shravanis30/VaultSight_AI",
+      live: "https://github.com/Shravanis30/VaultSight_AI"
     },
     {
       title: "AgroSense AI",
@@ -226,8 +226,8 @@ const Projects = () => {
         "Integrated ML inference pipelines with React frontend and Node/Express REST API backend."
       ],
       tech: ["Computer Vision", "PyTorch", "OpenCV", "React.js", "REST APIs"],
-      github: "https://github.com/shravanisalunke/AgroSense_AI",
-      live: "https://github.com/shravanisalunke/AgroSense_AI"
+      github: "https://github.com/Shravanis30/AgroSense_AI",
+      live: "https://github.com/Shravanis30/AgroSense_AI"
     },
     {
       title: "AI Student Dropout Engine",
@@ -240,8 +240,8 @@ const Projects = () => {
         "Empowers educators to provide timely interventions with automated analytics & dashboards."
       ],
       tech: ["Python", "Scikit-Learn", "React", "Express", "MongoDB"],
-      github: "https://github.com/shravanisalunke/AI-Student-Dropout",
-      live: "https://github.com/shravanisalunke/AI-Student-Dropout"
+      github: "https://github.com/Shravanis30/AI-Student-Dropout",
+      live: "https://github.com/Shravanis30/AI-Student-Dropout"
     },
     {
       title: "WomenSafety Shield",
@@ -254,8 +254,8 @@ const Projects = () => {
         "Geo-fencing and automated SMS alerts sent directly to emergency contacts during crises."
       ],
       tech: ["React Native", "Node.js", "Socket.io", "Geolocation API"],
-      github: "https://github.com/shravanisalunke/WomenSafety-App",
-      live: "https://github.com/shravanisalunke/WomenSafety-App"
+      github: "https://github.com/Shravanis30/WomenSafety-App",
+      live: "https://github.com/Shravanis30/WomenSafety-App"
     },
     {
       title: "Carpool Connect",
@@ -268,8 +268,8 @@ const Projects = () => {
         "Features Web3 MetaMask authentication and transparent rider-driver matching logic."
       ],
       tech: ["Ethereum", "Solidity", "Smart Contracts", "React", "Web3.js"],
-      github: "https://github.com/shravanisalunke/Carpool-Connect",
-      live: "https://github.com/shravanisalunke/Carpool-Connect"
+      github: "https://github.com/Shravanis30/Carpool-Connect",
+      live: "https://github.com/Shravanis30/Carpool-Connect"
     }
   ];
 
@@ -351,7 +351,7 @@ const Projects = () => {
         {/* View All GitHub CTA */}
         <div className="text-center mt-20">
            <motion.a 
-             href="https://github.com/shravanisalunke"
+             href="https://github.com/Shravanis30"
              target="_blank"
              rel="noreferrer"
              whileHover={{ scale: 1.05 }}

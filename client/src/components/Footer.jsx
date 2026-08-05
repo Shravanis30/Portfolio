@@ -21,8 +21,8 @@ const Footer = () => {
         {/* Social Links Area */}
         <div className="flex gap-6 mb-12">
           {[
-            { icon: <FaGithub size={18} />, href: "https://github.com/shravanisalunke", label: "GitHub" },
-            { icon: <FaLinkedin size={18} />, href: "https://linkedin.com/in/shravanisalunke", label: "LinkedIn" },
+            { icon: <FaGithub size={18} />, href: "https://github.com/Shravanis30", label: "GitHub" },
+            { icon: <FaLinkedin size={18} />, href: "https://www.linkedin.com/in/shravanisalunke", label: "LinkedIn" },
             { icon: <FaEnvelope size={18} />, href: "mailto:salunkeshravani561@gmail.com", label: "Email" },
             { icon: <FaInstagram size={18} />, href: "#", label: "Instagram" },
             { icon: <FaTwitter size={18} />, href: "#", label: "Twitter" }

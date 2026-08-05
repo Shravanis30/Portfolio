@@ -118,7 +118,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://github.com/shravanisalunke"
+              href="https://github.com/Shravanis30"
               target="_blank"
               rel="noreferrer"
               className="px-6 py-3 rounded-full bg-transparent border border-white/10 text-slate-300 text-xs font-bold tracking-widest sm:text-sm hover:bg-white/5 transition-colors flex items-center gap-2"
@@ -136,8 +136,8 @@ const Hero = () => {
           >
             <div className="flex gap-4">
               {[
-                { icon: <FaGithub size={16} />, href: "https://github.com/shravanisalunke" },
-                { icon: <FaLinkedin size={16} />, href: "https://linkedin.com/in/shravanisalunke" },
+                { icon: <FaGithub size={16} />, href: "https://github.com/Shravanis30" },
+                { icon: <FaLinkedin size={16} />, href: "https://www.linkedin.com/in/shravanisalunke" },
                 { icon: <FaEnvelope size={16} />, href: "mailto:salunkeshravani561@gmail.com" }
               ].map((social, index) => (
                 <a
