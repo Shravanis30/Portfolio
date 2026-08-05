@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTrophy, FaCode, FaMedal, FaCertificate } from 'react-icons/fa';
+import { FaTrophy, FaCode, FaMedal, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Achievements = () => {
   const achievements = [
@@ -30,21 +30,24 @@ const Achievements = () => {
       subTitle: "Microsoft Learn Certificate",
       date: "Certification",
       desc: "Certified by Microsoft Learn in Generative AI fundamentals, LLM capabilities, autonomous agent design, and AI application principles.",
-      icon: <FaCertificate className="text-[#e8c872]" />
+      icon: <FaCertificate className="text-[#e8c872]" />,
+      certificateUrl: "https://learn.microsoft.com/api/achievements/share/en-us/ShravaniSalunke-0638/3ZP6TTZH?sharingId=C88629086A8ABA5E"
     },
     {
       title: "Introduction to AI Concepts",
       subTitle: "Microsoft Learn Certificate",
       date: "Certification",
       desc: "Certified by Microsoft Learn in core artificial intelligence concepts, machine learning workloads, and AI service integration.",
-      icon: <FaCertificate className="text-[#e8c872]" />
+      icon: <FaCertificate className="text-[#e8c872]" />,
+      certificateUrl: "https://learn.microsoft.com/api/achievements/share/en-us/ShravaniSalunke-0638/QL3ZXCKE?sharingId=C88629086A8ABA5E"
     },
     {
       title: "AWS Cloud Foundations",
       subTitle: "AWS Essentials Certificate",
       date: "Certification",
       desc: "Certified in AWS Foundations: Getting Started with the AWS Cloud Essentials, mastering core cloud infrastructure, security, and services.",
-      icon: <FaCertificate className="text-[#e8c872]" />
+      icon: <FaCertificate className="text-[#e8c872]" />,
+      certificateUrl: "https://drive.google.com/file/d/1PtufLCLfU1T0XJ85MeYIHOYr3n5bOa4v/view?usp=sharing"
     }
   ];
 
@@ -100,10 +103,21 @@ const Achievements = () => {
                 
                 <p className="text-[#e8c872]/70 text-xs font-semibold uppercase tracking-wider mb-4 italic">{ach.subTitle}</p>
                 
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
                   {ach.desc}
                 </p>
               </div>
+
+              {ach.certificateUrl && (
+                <a
+                  href={ach.certificateUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 px-5 py-2.5 rounded-full border border-[#e8c872]/30 bg-[#e8c872]/5 text-[#e8c872] text-[10px] font-bold tracking-widest uppercase hover:bg-[#e8c872]/20 hover:border-[#e8c872] transition-all inline-flex items-center gap-2 shadow-md"
+                >
+                  View Credential <FaExternalLinkAlt size={10} />
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
