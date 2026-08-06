@@ -66,7 +66,7 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-slate-400 text-lg leading-relaxed">
-                I completed my Diploma in Computer Engineering from <span className="text-white font-semibold">Dr. Babasaheb Ambedkar Technological University</span> (CGPA 9.40/10) and am pursuing B.Tech in CSE (IoT, Cyber Security & Blockchain) at <span className="text-white font-semibold">Vishwakarma Institute of Technology, Pune</span>. Building at the intersection of full-stack development, AI, and cloud architecture, I enjoy transforming complex requirements into scalable, user-centric software solutions.
+                I completed my Diploma in Computer Engineering from <span className="text-white font-semibold">Dr. Babasaheb Ambedkar Technological University</span> (CGPA 9.44/10) and am pursuing B.Tech in CSE (IoT, Cyber Security & Blockchain) at <span className="text-white font-semibold">Vishwakarma Institute of Technology, Pune</span>. Building at the intersection of full-stack development, AI, and cloud architecture, I enjoy transforming complex requirements into scalable, user-centric software solutions.
               </p>
               
               <p className="text-slate-400 text-lg leading-relaxed">

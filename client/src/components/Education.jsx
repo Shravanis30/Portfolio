@@ -8,7 +8,7 @@ const Education = () => {
       institution: "Vishwakarma Institute Of Technology",
       degree: "B.Tech in CSE (IoT, Cyber Security & Blockchain)",
       year: "Sept 2025 - Present",
-      details: "Coursework: AI, Machine Learning, Deep Learning, NLP, Database Management Systems, Data Structures & Algorithms, Operating Systems, OOP, Networking, Cloud Computing, Cybersecurity, Blockchain Basics.",
+      details: "",
       stats: "Pursuing",
       location: "Pune, Maharashtra",
       icon: <FaGraduationCap className="text-[#e8c872]" />,
@@ -18,8 +18,8 @@ const Education = () => {
       institution: "Dr. Babasaheb Ambedkar Technological University",
       degree: "Diploma in Computer Engineering",
       year: "Sept 2022 - June 2025",
-      details: "Focused on software development, cloud computing, database management systems, and system design.",
-      stats: "CGPA: 9.40 / 10",
+      details: "",
+      stats: "CGPA: 9.44 / 10",
       location: "Lonere, Raigad",
       icon: <FaSchool className="text-[#e8c872]" />,
       current: false
@@ -107,9 +107,11 @@ const Education = () => {
                       </p>
 
                       {/* Description / Details */}
-                      <p className="text-slate-400 text-xs leading-relaxed mb-6">
-                        {edu.details}
-                      </p>
+                      {edu.details && (
+                        <p className="text-slate-400 text-xs leading-relaxed mb-6">
+                          {edu.details}
+                        </p>
+                      )}
 
                       {/* Footer Info */}
                       <div className={`pt-4 border-t border-white/5 flex flex-wrap items-center gap-4 text-xs ${isEven ? 'md:justify-end' : 'justify-between'}`}>

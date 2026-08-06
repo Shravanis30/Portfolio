@@ -9,7 +9,7 @@ const Experience = () => {
       role: "Software Developer Intern",
       period: "Jun 2025 - Jun 2026",
       type: "Internship",
-      location: "Hybrid",
+      location: "Remote",
       description: "Working on end-to-end production deployments and architecting web presences with focus on responsiveness and performance.",
       tasks: [
         "Engineered and delivered 10+ production-ready full-stack applications, spanning business websites, SaaS products, and enterprise management systems.",
